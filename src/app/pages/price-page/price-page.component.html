@@ -1,0 +1,29 @@
+<section class="product-id">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <ul class="product-id__list">
+          <li *ngFor = "let itemNumber of [1,2,3,4,5]" class="product-id__list-item">
+            <a href="" class="new-id__anchor" [routerLink]="'/pages/product/' + itemNumber">
+            {{'product' + itemNumber}}
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="product-to">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <input type="text" class="product-to__input" placeholder="product number" #productNumber>
+        <button class="product-to__button"
+          (click)="goToProduct(productNumber.value)"
+        >
+          Go to product
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

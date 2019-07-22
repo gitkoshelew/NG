@@ -1,0 +1,62 @@
+@import '../../@theme/utils/variables';
+@import '../../@theme/utils/mixins';
+@import '../../@theme/utils/dimensions';
+@import '../../@theme/base/fonts';
+
+.main{
+  padding: 30px 0;
+  &__skills{
+    &-list{
+      padding: 20px 0;
+      &-item{
+        text-transform: uppercase;
+        font-size: $fontLarger;
+      }
+    }
+  }
+  &__technologies{
+    &-list{
+      padding: 20px 0;
+      @include isFlex(center, space-between);
+      &-item{
+        text-transform: uppercase;
+        font-size: $fontLarger;
+      }
+    }
+
+  }
+  &__merits{
+    &-list{
+      padding: 20px 0;
+      &-item{
+        text-transform: uppercase;
+        font-size: $fontLarger;
+      }
+    }
+    &-form{
+      border: 2px solid $border;
+      padding: 20px;
+      border-radius: $borderRad;
+      &-input{
+        width: 100%;
+        display: block;
+        &_submit{
+          border-radius: $borderRad;
+          border: 2px solid $bg4;
+          padding: 5px;
+          color: $fg;
+          background: $bg4;
+          &:active{
+            background: $fg;
+            color: $bg4;
+          }
+        }
+      }
+    }
+    &-label{
+      display: block;
+      width: 100%;
+      padding: 10px;
+    }
+  }
+}

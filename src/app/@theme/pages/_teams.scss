@@ -1,0 +1,24 @@
+#teams__page {
+  .header__content {
+    padding: 145px 0 220px;
+    @include bgImg('@~images/bg/teamsbg320.jpg', no-repeat, center, cover);
+    @media #{$md} {
+      padding: 177px 0 205px;
+      background-image: url('@~images/bg/teamsbg768.jpg');
+    }
+    @media #{$lg} {
+      background-image: url('@~images/bg/teamsbg1200.jpg');
+    }
+    @media #{$xxl} {
+      background-image: url('@~images/bg/teamsbg1920.jpg');
+    }
+  }
+
+  .approach__list {
+    @media #{$premd} {
+      padding-left: 0;
+      margin-top: 0;
+      padding-top: 0;
+    }
+  }
+}

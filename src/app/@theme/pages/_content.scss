@@ -1,0 +1,22 @@
+/* src/assets/styles/pages/_services.scss  */
+
+#content__page {
+  .header__content {
+    @include bgImg('@~images/bg/content_320.jpg', no-repeat, center, cover);
+    @media #{$md} {
+      padding: 125px 0;
+      background-image: url('@~images/bg/content_768.jpg');
+    }
+    @media #{$lg} {
+      padding: 115px 0;
+      background-image: url('@~images/bg/content_1200.jpg');
+    }
+    @media #{$xxl} {
+      background-image: url('@~images/bg/content_1920.jpg');
+    }
+  }
+}
+
+/*
+  Responsive
+*/

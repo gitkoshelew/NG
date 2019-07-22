@@ -1,0 +1,86 @@
+#case__page {
+  .header__content {
+    padding: 35px 0;
+    @include bgImg('@~images/bg/casebg320.jpg', no-repeat, center, cover);
+    @media #{$md} {
+      padding: 45px 0 55px;
+      background-image: url('@~images/bg/casebg768.jpg');
+    }
+    @media #{$lg} {
+      background-image: url('@~images/bg/casebg1200.jpg');
+    }
+    @media #{$xxl} {
+      background-image: url('@~images/bg/casebg1920.jpg');
+    }
+    &-heading {
+      margin-bottom: 0;
+    }
+    &-intro {
+      font-size: $fontLarge;
+      line-height: 1.75em;
+      margin-bottom: 3em;
+      width: 100%;
+      @media #{$md} {
+        line-height: 1.33em;
+        padding-top: 1em;
+        margin-bottom: 3.75em;
+      }
+      @media #{$lg} {
+        margin-bottom: 2.25em;
+      }
+    }
+  }
+  .termuse {
+    .section--pattern--top-right {
+      width: 50%;
+      min-height: none;
+      height: 174px;
+      @media #{$md} {
+        height: 279px;
+        top: 0;
+        width: 63%;
+      }
+      @media #{$lg} {
+        height: 100%;
+        width: 80%;
+      }
+      @media #{$xxl} {
+        width: 70%;
+      }
+    }
+    &__text {
+      max-width: 730px;
+    }
+  }
+  .clientsay {
+    &_fullimg {
+      padding-top: 0;
+      margin-top: -20px;
+      @media #{$md} {
+        margin-top: -50px;
+      }
+      @media #{$lg} {
+        padding-bottom: 100px;
+        margin-top: -100px;
+      }
+      .clientsay__content-wrapper {
+        background: none;
+      }
+      .clientsay__slider {
+        margin-top: 20px;
+      }
+    }
+    .section--pattern--bottom {
+      height: 478px;
+      width: 75%;
+      bottom: 150px;
+      @media #{$md} {
+        width: 70%;
+      }
+      @media #{$lg} {
+        width: 58%;
+        bottom: 50px;
+      }
+    }
+  }
+}

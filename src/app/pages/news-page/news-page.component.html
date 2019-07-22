@@ -1,0 +1,48 @@
+
+<section class="expas" id="expas">
+  <div class="container">
+
+    <div class="row">
+      <div class="col">
+        <div class="expas__container">
+          <h5 expas__dir #expasRef="expas">ExportAs</h5>
+          <h5 expas__dir #expasRef2="expas">ExportAs</h5>
+          <button class="expas__button"
+            (click)="expasRef.setRandomColor()"  
+          >
+            export as expas
+          </button>
+          <app-button 
+          (clickEvent)="expasRef2.setRandomColor();expasRef.setRandomColor();"
+          >
+          </app-button>
+          <app-button 
+          [clickEventProps]="expasRef2.setRandomColor.bind(expasRef2)"
+          >
+          </app-button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="news" id="news">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+          <div *delay--dir>Delay Text</div>
+
+          <div *ngFor="let delay of [1,2,3,4,5]">
+            <div *delayParam__dir="delay">
+              Delay with param Text
+            </div>
+            <ng-template [delayParam__dir]="delay" >
+              <div [style.backgroundColor]="'#42164b'">
+                Delay with param Text
+              </div>
+            </ng-template>
+          </div>
+      </div>
+    </div>
+
+  </div>
+</section>

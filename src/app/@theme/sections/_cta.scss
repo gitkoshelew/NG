@@ -1,0 +1,34 @@
+.cta {
+  color: $ligthText;
+  @include bgImg('@~images/bg/pros320.jpg', no-repeat, center, cover);
+  @media #{$md} {
+    background-image: url('@~images/bg/pros768.jpg');
+  }
+  @media #{$lg} {
+    background-image: url('@~images/bg/pros1200.jpg');
+  }
+  &__heading {
+    padding-right: 0;
+  }
+  &__text {
+    @media #{$lg} {
+      padding-right: 25%;
+    }
+    @media #{$xxl} {
+      padding-right: 33%;
+    }
+  }
+
+  &__button {
+    width: 100%;
+    margin: 37px auto 5px;
+    padding-left: 0;
+    padding-right: 0;
+    @media #{$md} {
+      width: auto;
+      max-width: none;
+      padding-right: 30px;
+      padding-left: 30px;
+    }
+  }
+}

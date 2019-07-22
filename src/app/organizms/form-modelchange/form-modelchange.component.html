@@ -1,0 +1,29 @@
+<form action="" [class]="section+'__form-change'">
+    <ng-content select="h5">
+  
+    </ng-content>
+    <label 
+      [class]="section+'__form-change-label'"
+      *ngFor= "
+        let input of formInputs;
+        let index = index;
+        let first = first;
+        let last= last;
+      "
+      [ngClass] = "{
+        label_first:first,
+        label_last:last
+      }"
+    >
+      <input 
+        [class]="section+'__form-change-input'"
+        [name]="input.name"
+        [type]="input.type" 
+        [ngModel]="input.value"
+        (ngModelChange)="changeTextFromNavInput($event, index)"
+
+      >
+  
+    </label>
+  
+  </form>

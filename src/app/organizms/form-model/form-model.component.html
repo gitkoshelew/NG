@@ -1,0 +1,30 @@
+<form action="" [class]="section+'__form-model'">
+    <ng-content select="h5" >
+  
+    </ng-content>
+    <label [class]="section+'__form-model-label'"
+      *ngFor= "
+        let input of formInputs;
+        let i = index;
+        let first = first;
+        let last= last;
+      "
+      [ngClass] = "{
+        label_first:first,
+        label_last:last
+      }"
+
+      [ngStyle]="{
+        'paddingTop':'10px',
+        'padding-bottom':'10px'
+      }"
+    >
+      <input
+        [class]="section+'__form-model-input'" 
+        [name]="input.name"
+        [type]="input.type" 
+        [(ngModel)]="input.value"
+        (click)="log($event)"
+      >
+    </label>
+  </form>

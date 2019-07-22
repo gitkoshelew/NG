@@ -1,0 +1,31 @@
+<section class="about" id="about">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <form action=""
+          class="about__form"
+        >
+          <label for="" class="about__form-label">
+            User name: 
+            <input type ="text" 
+            [(ngModel)]="userName"
+            name="userName"
+            />
+
+          </label>
+          <button (click)="search()">search user</button>
+        </form>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div *ngIf="gitHubUser">
+          <img src="{{gitHubUser.avatar_url}}"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+

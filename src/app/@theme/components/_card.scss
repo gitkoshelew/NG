@@ -1,0 +1,296 @@
+.card--article {
+  @extend %card-article;
+}
+
+.card--product {
+  @extend %card-product;
+}
+
+.card--list--item {
+  @extend %card-list-item;
+}
+
+%card-prototype {
+  padding: 50px 20px 36px;
+  margin: 7px 0;
+  border: 1px solid $themeCardBorder;
+  background: $cardBg;
+  height: calc(100% - 14px);
+  transition: $transition;
+  @media #{$md} {
+    padding: 50px 28px 36px;
+  }
+
+  .card-img {
+    width: 70px;
+    height: 70px;
+    @include bgImg('@~images/img/cycle.svg', no-repeat, center, contain);
+    margin-bottom: 25px;
+
+    @media #{$lg} {
+      width: 64px;
+      height: 64px;
+    }
+    &.img {
+      &--devcenter {
+        background-image: url('@~images/img/devcenter.svg');
+      }
+      &--team {
+        background-image: url('@~images/img/team.svg');
+      }
+      &--discovery {
+        background-image: url('@~images/img/discovery.svg');
+      }
+      &--extension {
+        background-image: url('@~images/img/extension.svg');
+      }
+      &--design {
+        background-image: url('@~images/img/design.svg');
+      }
+      &--ui {
+        background-image: url('@~images/img/ui.svg');
+      }
+      &--solutions {
+        background-image: url('@~images/img/solutions.svg');
+      }
+      &--businessautomation {
+        background-image: url('@~images/img/businessautomation.svg');
+      }
+      &--reengineering {
+        background-image: url('@~images/img/reengineering.svg');
+      }
+      &--software {
+        background-image: url('@~images/img/software.svg');
+      }
+      &--teams {
+        background-image: url('@~images/img/teams.svg');
+      }
+      &--analysis {
+        background-image: url('@~images/img/analysis.svg');
+      }
+      &--time {
+        background-image: url('@~images/img/time.svg');
+      }
+      &--budget {
+        background-image: url('@~images/img/budget.svg');
+      }
+      &--transparency {
+        background-image: url('@~images/img/transparency.svg');
+      }
+      &--focus {
+        background-image: url('@~images/img/focus.svg');
+      }
+      &--cycle {
+        background-image: url('@~images/img/cycle.svg');
+      }
+      &--guard {
+        background-image: url('@~images/img/guard.svg');
+      }
+      &--edtech {
+        background-image: url('@~images/img/edtech.svg');
+      }
+      &--insurance {
+        background-image: url('@~images/img/insurance.svg');
+      }
+      &--scales {
+        background-image: url('@~images/img/scales.svg');
+      }
+      &--entertainment {
+        background-image: url('@~images/img/entertainment.svg');
+      }
+      &--ecommerce {
+        background-image: url('@~images/img/ecommerce.svg');
+      }
+      &--industry {
+        background-image: url('@~images/img/industry.svg');
+      }
+      &--noadditional {
+        background-image: url('@~images/img/noadditional.svg');
+      }
+      &--fullcontrol {
+        background-image: url('@~images/img/fullcontrol.svg');
+      }
+      &--savetimecost {
+        background-image: url('@~images/img/savetimecost.svg');
+      }
+      &--communication {
+        background-image: url('@~images/img/communication.svg');
+      }
+      &--predictablebudget {
+        background-image: url('@~images/img/predictablebudget.svg');
+      }
+      &--scaling {
+        background-image: url('@~images/img/scaling.svg');
+      }
+    }
+    @media #{$md} {
+      margin-bottom: 17px;
+    }
+  }
+  h4 {
+    margin-bottom: 25px;
+    & > p {
+      @media #{$md} {
+        display: block;
+      }
+      @media #{$xxl} {
+      }
+    }
+  }
+
+  .card-preview {
+    margin-bottom: 25px;
+  }
+}
+
+%card-product {
+  @extend %card-prototype;
+  padding-top: 45px;
+  padding-bottom: 20px;
+  @media #{$md} {
+    padding: 45px 24px 12px;
+  }
+
+  @media #{$lg} {
+    padding: 48px 32px 15px;
+    height: calc(100% - 26px);
+    margin-bottom: 26px;
+  }
+  @media #{$xxl} {
+    padding: 45px 48px 12px;
+  }
+
+  .card-img {
+    margin-bottom: 21px;
+    @media #{$lg} {
+      margin-bottom: 26px;
+    }
+  }
+  .card-preview {
+    @media #{$md} {
+      line-height: 1.75em;
+    }
+  }
+
+  h4,
+  h4 > p {
+    @media #{$md} {
+      font-size: $fontLarge;
+    }
+    @media #{$lg} {
+      font-size: $h4Desk / 1.2;
+      margin-bottom: 8px;
+    }
+  }
+}
+
+%card-article {
+  @extend %card-prototype;
+  padding-bottom: 60px;
+  cursor: pointer;
+  @media #{$lg} {
+    padding: 48px 32px 88px;
+  }
+  @media #{$xxl} {
+    padding: 45px 45px 85px;
+  }
+
+  button {
+    @extend %clean-button;
+    position: absolute;
+    bottom: 57px;
+    left: 28px;
+    color: $mainText;
+    font-size: $fontLess;
+    @media #{$md} {
+      left: 36px;
+    }
+    @media #{$lg} {
+      bottom: 52px;
+      left: 40px;
+      font-size: $font;
+    }
+    @media #{$xxl} {
+      left: 53px;
+    }
+    &:hover {
+      color: $themeDarkColor;
+    }
+  }
+  .card-img {
+    @media #{$lg} {
+      margin-bottom: 60px;
+    }
+    @media #{$xxl} {
+      margin-bottom: 38px;
+    }
+  }
+  .card-preview {
+    @media #{$lg} {
+      line-height: 1.75em;
+    }
+  }
+  &:hover,
+  &:focus {
+    box-shadow: $boxShadowCardMaterial;
+    border-color: transparent;
+    h4 {
+      color: $themeColor;
+    }
+    button {
+      color: $themeColor;
+    }
+  }
+  h4 {
+    @media #{$lg} {
+      line-height: 1em;
+      margin-bottom: 12px;
+    }
+
+    & > p {
+      @media #{$md} {
+        display: inline;
+      }
+      @media #{$xxl} {
+        display: block;
+      }
+    }
+  }
+}
+
+%card-list-item {
+  @extend %card-prototype;
+  padding: 32px 24px 0;
+  text-align: center;
+  @media #{$md} {
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+    justify-content: flex-start;
+  }
+  @media #{$lg} {
+    padding: 32px 60px 16px 20px;
+  }
+  .card-img {
+    width: 100%;
+    margin-bottom: 20px;
+    @media #{$md} {
+      width: 110px;
+      min-width: 110px;
+      margin-right: 20px;
+      margin-top: 25px;
+    }
+  }
+  h4 {
+    margin-bottom: 5px;
+    @media #{$md} {
+      margin-bottom: 15px;
+    }
+  }
+  .card-preview {
+    line-height: 2em;
+    @media #{$md} {
+      line-height: 1.75em;
+    }
+  }
+}

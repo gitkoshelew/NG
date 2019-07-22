@@ -1,0 +1,42 @@
+<header class="header">
+  <div class="container">
+    <div class="row">
+      <div class="col-7">
+        <app-navlist *ngIf="isNavOpen"
+          [secProp]="section"
+          [list]="list"
+          [isNavOpen]="isNavOpen"
+        >
+        </app-navlist>
+      </div>
+      <div class="col-4">
+          <input type="text" 
+          class='header__search-input'
+          (input)="changeSearchWord($event)"
+          #navInput
+        >
+        <button 
+          [class]='header__search-button'
+          (click)="alertMessage(searchWord, navInput)"
+          >
+          Search
+        </button>
+      </div>
+      <div class="col-1">
+        <button
+          timeout--dir 
+          [class]="'header__nav-open-button'"
+          (click)="toggleNav()"
+        >
+            {{isNavOpen ? 'close' : 'open'}}
+        </button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+      </div>
+    </div>
+  </div>
+</header>
+
+

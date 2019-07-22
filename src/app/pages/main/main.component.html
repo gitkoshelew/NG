@@ -1,0 +1,112 @@
+<main class="main">
+  <div class="container">
+    <div class="row">
+      <h4 class="main__heading">
+        {{heading}}
+      </h4>
+      <div class="col">
+        <ul class='main__technologies-list'>
+          <li class="main__technologies-list-item"
+            *ngFor="let key of technologiesList | keys"
+          >
+            {{key.value}}
+          </li>
+
+        </ul> 
+
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col">
+        <ul class='main__merits-list'>
+          <li *ngFor= "let key of objectKeys(meritsList)">
+            <p>{{meritsList[key].value}}</p>
+            {{key + meritsList[key].text}}
+            <button class="main__merits-remove"
+              (click)="removeMerit(key)"
+            >
+                -
+            </button>
+          </li>
+
+        </ul>
+      </div>
+      <div class="col">
+        <form action="" class="main__merits-form">
+          <label for="" class="main__merits-label">
+            <input type="text" class="main__merits-form-input" name='name' #name>
+          </label>
+
+          <label for="" class="main__merits-label">
+            <input type="text" class="main__merits-form-input" name='text' #text>
+          </label>
+
+          <label for="" class="main__merits-label">
+            <input type="text" class="main__merits-form-input" name='value' #value>
+          </label>
+
+          <label for="" class="main__merits-label">
+            <input type="submit" class="main__merits-form-input main__merits-form-input_submit" value="add merit" (click)="addMerit(name.value, text.value, value.value); name.value='';text.value='';value.value='';">
+          </label>
+        </form>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <ul class='main__skills-list' >
+          <li *ngFor= "let item of skillsList | keyvalue">
+            <p>{{item.key}}</p>
+            {{item.value.value}}  {{item.value.text}}
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <app-form 
+          [section]="section"
+          [formInputs] = "formInputs"
+          (onFormChange)=changeForm($event)
+        >
+          <h5>
+              Form inputs 1
+          </h5>
+        </app-form>
+      </div>
+
+      <div class="col">
+        <app-form-model
+          [section]="section"
+          [formInputs] = "formInputs"
+        >
+          <h5>
+              Form inputs 2
+          </h5>
+        </app-form-model>
+      </div>
+      <div class="col">
+        <app-form-modelchange
+        [section]="section"
+        [formInputs] = "formInputs"
+        (onFormChange) = emitHandler($event)
+        >
+          <h5>
+            Form inputs 3
+          </h5>
+        </app-form-modelchange>
+      </div>
+      <div class="col">
+        <ul
+          [class]="main__form-values"
+        >
+          <li class="main-form-values-item"
+            *ngFor="let item of formInputs"
+          >
+            {{item.value}}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</main>

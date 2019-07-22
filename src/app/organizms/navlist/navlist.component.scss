@@ -1,0 +1,41 @@
+@import '../../@theme/utils/variables';
+@import '../../@theme/utils/mixins';
+@import '../../@theme/utils/dimensions';
+@import '../../@theme/base/fonts';
+
+
+.nav{
+  @include isFlex();
+  &-list{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    &-anchor{
+      text-transform: uppercase;
+      padding: 5px 10px;
+      margin: 0 5px;
+
+      &.even{
+        color: green;
+      }
+      &.first, &.last{
+        color: red;
+      }
+      &.active{
+        background: $bg;
+      }
+    }
+  }
+
+  
+}
+
+
+.navlistItem{
+  &_even{
+    color: green;
+  }
+  &_first, &_last{
+    color: red;
+  }
+}

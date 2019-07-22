@@ -1,0 +1,36 @@
+.helpyou {
+  @media #{$md} {
+    padding-top: 110px;
+    padding-bottom: 30px;
+    div[class^='col'] {
+      margin-bottom: 10px;
+    }
+  }
+  @media #{$lg} {
+    padding-bottom: 90px;
+  }
+  .section--pattern--bottom-right {
+    bottom: 25%;
+    height: 50%;
+    min-height: none;
+    @media #{$md} {
+      bottom: 18%;
+      height: 253px;
+      width: 63%;
+    }
+    @media #{$lg} {
+      bottom: 0;
+      height: 439px;
+      width: 70%;
+    }
+  }
+  &__heading {
+    margin-bottom: 1.1em;
+    @media #{$md} {
+      margin-bottom: 1.5em;
+    }
+    @media #{$lg} {
+      margin-bottom: 1em;
+    }
+  }
+}

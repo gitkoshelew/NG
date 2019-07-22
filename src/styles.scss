@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+@import './app/@theme/base/fonts';
+
+/*
+  Utils
+*/
+@import './app/@theme/utils/variables';
+@import './app/@theme/utils/dimensions';
+@import './app/@theme/utils/mixins';
+@import './app/@theme/utils/keyframes';
+
+/*
+  Layout
+*/
+@import './app/@theme/layout/general';
+@import './app/@theme/layout/pagegrid';
+
+app-root{
+  width: 100%;
+}

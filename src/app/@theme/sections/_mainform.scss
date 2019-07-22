@@ -1,0 +1,225 @@
+.mainform {
+  padding-top: 51px;
+
+  @media #{$md} {
+    padding-top: 90px;
+    @include bgImg('@~images/bg/form768.jpg', no-repeat, center, cover);
+  }
+  @media #{$lg} {
+    background-image: url('@~images/bg/form1200.jpg');
+  }
+  @media #{$xxl} {
+    background-image: url('@~images/bg/form1920.jpg');
+  }
+
+  &__heading {
+    color: $ligthText;
+  }
+  &__intro {
+    color: $ligthText;
+  }
+  &__form {
+    background: $themeLightColor;
+    margin-top: 50px;
+    padding: 31px 18px 50px;
+    position: relative;
+    overflow: hidden;
+    @media #{$md} {
+      padding: 40px 34px 60px;
+    }
+    @media #{$lg} {
+      padding: 40px 34px 52px;
+    }
+    @media #{$xxl} {
+      padding: 40px 45px 52px;
+    }
+  }
+  &__label {
+    width: 100%;
+    &_textarea {
+      height: auto;
+      min-height: 70px;
+      margin-top: 10px;
+    }
+  }
+  &__inputs {
+    &_main {
+      @media #{$md} {
+        @include isFlex(center, space-between);
+      }
+      .mainform__label {
+        @media #{$md} {
+          width: calc(50% - 10px);
+        }
+        @media #{$lg} {
+          width: calc(50% - 20px);
+        }
+      }
+    }
+
+    &_drag {
+      margin-top: 33px;
+
+      mark {
+        display: block;
+        font-size: $fontSmall;
+      }
+    }
+    &_check {
+      @media #{$lg} {
+        display: inline-block;
+        font-size: 0;
+        width: 63%;
+      }
+    }
+    &_submit {
+      @media #{$lg} {
+        font-size: 0;
+        display: inline-block;
+        text-align: right;
+        width: 36%;
+      }
+    }
+  }
+  &__drag {
+    &-files {
+      margin-bottom: 10px;
+      background: $mainBgDark;
+      padding: 0 14px;
+      @include isFlex(flex-start, flex-start);
+    }
+    &-img {
+      width: 36px;
+      height: 36px;
+      margin: 7px auto;
+      @include bgImg('@~images/img/download.svg', no-repeat, center, contain);
+      @media #{$md} {
+        width: 45px;
+        height: 45px;
+      }
+      @media #{$lg} {
+        position: absolute;
+        left: 20px;
+        top: 17px;
+        width: 36px;
+        height: 40px;
+      }
+    }
+    &-label {
+      @include isFlex(center, flex-start, column);
+      position: relative;
+      margin-bottom: 20px;
+      border: 1px dashed $darkBorder;
+      padding: 20px 15px 25px;
+      @media #{$md} {
+        padding: 25px 15px;
+      }
+      @media #{$lg} {
+        flex-direction: row;
+        padding: 15px 15px 15px 75px;
+      }
+      &.label--dragged {
+        background: rgba($themeSupportColor, 0.5);
+      }
+    }
+
+    &-input {
+      position: absolute;
+      top: 0;
+      visibility: hidden;
+    }
+    &-support {
+      pointer-events: none;
+    }
+
+    &-heading {
+      text-align: center;
+      @media #{$md} {
+        font-size: $fontLess;
+        padding-top: 2px;
+        padding-bottom: 8px;
+      }
+      @media #{$lg} {
+        font-size: $font;
+        text-align: left;
+      }
+    }
+    &-text {
+      text-align: center;
+      font-size: $fontSmall;
+      color: $themeSecondaryColor;
+      @media #{$lg} {
+        font-size: $fontLess;
+        text-align: left;
+      }
+    }
+    &-file {
+      align-self: flex-start;
+      pointer-events: auto;
+      @include bgImg('@~images/img/downloadedfile.svg', no-repeat, 0 0, auto);
+      min-height: 44px;
+      padding-left: 44px;
+      padding-top: 10px;
+      display: inline-block;
+      margin: 20px 44px 10px 10px;
+
+      &_invalid {
+        span {
+          text-decoration: line-through;
+        }
+      }
+
+      &-delete {
+        display: inline-block;
+
+        width: 12px;
+        height: 12px;
+        margin-left: 5px;
+        @extend %after;
+        &:after,
+        &:before {
+          width: 12px;
+          height: 2px;
+          left: 0;
+          top: 50%;
+          background: $themeErrorColor;
+        }
+        &:after {
+          transform: rotate(45deg);
+        }
+        &:before {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+
+  &__checkwrapper {
+    @media #{$md} {
+      margin-bottom: 20px;
+    }
+    @media #{$lg} {
+      margin-bottom: 0px;
+      padding: 9px 0 15px;
+    }
+  }
+  &__submit {
+    width: 100%;
+    display: block;
+    @media #{$md} {
+      max-width: 260px;
+    }
+    @media #{$lg} {
+      margin-right: -5px;
+      width: auto;
+      transform: translate(0, -7px);
+    }
+  }
+  &__success {
+    @extend %popup--absolute;
+    top: -100%;
+    &.active {
+      top: 0;
+    }
+  }
+}

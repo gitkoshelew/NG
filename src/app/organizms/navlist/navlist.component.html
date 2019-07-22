@@ -1,0 +1,41 @@
+<nav 
+      [class]="section+'__nav nav'"
+      [class.nav_open]="isNavOpen"
+      [class.nav_main]="isNavMain"
+    >
+  <ul [class]="section+'__nav-list nav-list'"
+      [style.fontSize.px]="20">
+    <li 
+      *ngFor= "
+        let navItem of list;
+        let i = index;
+        let first = first;
+        let last= last;
+        let odd = odd;
+        let even = even
+      "
+      [class]="section+'__nav-list-item nav-list-item'"
+      [ngClass] = "{
+        first:first,
+        last:last,
+        even:even,
+        odd:odd
+      }"
+    >
+      {{i + 1}}
+      <a bold--dir 
+        [routerLink]="navItem.link" 
+        routerLinkActive="active"
+        [class]="section+'__nav-list-anchor nav-list-anchor'"
+        [ngClass] = "{
+          first:first,
+          last:last,
+          even:even,
+          odd:odd
+        }"
+        >
+        {{navItem.text}}
+      </a>
+    </li>
+  </ul>
+</nav>

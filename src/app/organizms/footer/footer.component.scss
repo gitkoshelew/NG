@@ -1,0 +1,9 @@
+@import '../../@theme/utils/variables';
+@import '../../@theme/utils/mixins';
+@import '../../@theme/utils/dimensions';
+@import '../../@theme/base/fonts';
+
+.footer{
+  background: $bg;
+  padding: 30px 0;
+}

@@ -1,0 +1,27 @@
+<form action="" [class]="section+'__form-regular'">
+  <ng-content select="h5">
+
+  </ng-content>
+  <label 
+    [class]="section+'__form-regular-label'"
+    *ngFor= "
+      let input of formInputs;
+      let i = index;
+      let first = first;
+      let last= last;
+    "
+    [ngClass] = "{
+      label_first:first,
+      label_last:last
+    }"
+  >
+    <input 
+      [class]="section+'__form-regular-input'"
+      [name]="input.name"
+      [type]="input.type" 
+      [value]="input.value"
+      (input)="changeTextFromNavInput($event, i)"
+    >
+  </label>
+
+</form>

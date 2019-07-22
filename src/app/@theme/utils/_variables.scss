@@ -1,0 +1,82 @@
+/* src/assets/styles/utils/_colors.scss  */
+
+  $primary: #a16eff;
+  $success: #00d68f;
+  $info: #0095ff;
+  $warning: #ffaa00;
+  $danger: #ff3d71;
+
+  $fontMain: 'Open Sans, sans-serif';
+  $fontSecondary: 'Raleway, sans-serif';
+
+  $bg: #323259;
+  $bg2: #252547;
+  $bg3: #1b1b38;
+  $bg4: #13132b;
+
+  $border: #323259;
+  $border2: #252547;
+  $border3: #1b1b38;
+  $border4: #13132b;
+  $border5: #13132b;
+
+  $fg: #b4b4db;
+  $fgHeading: #ffffff;
+  $fgText: #ffffff;
+  $fgHighlight: $primary;
+  $layoutBg: #151a30;
+  $separator: #151a30;
+
+  $primaryLight: #b18aff;
+  $successLight: #2ce69b;
+  $infoLight: #42aaff;
+  $warningLight: #ffc94d;
+  $dangerLight: #ff708d;
+
+$themeColor: #533b58;
+$themeDarkColor: #42164b;
+$themeLightColor: #755c80;
+$themeSecondaryColor: #a0a5b4;
+$themeSecondaryLightColor: #f3f7fc;
+$themeSupportColor: #8d96b2;
+$themeDisabledColor: #d1d6d8;
+$themeErrorColor: #df1949;
+$themeCardBorder: #e1e3e6;
+
+$mainBg: #e5e5e5;
+$mainBgDark: #f5f6fa;
+$secondBg: $themeColor;
+$disabledBg: $themeDisabledColor;
+$cardBg: $themeLightColor;
+$navOpacityBgInitial: rgba(61, 61, 61, 0);
+$navOpacityBg: rgba(61, 61, 61, 0.6);
+
+$mainText: #fff;
+$secondText: $themeSecondaryColor;
+$ligthText: $themeLightColor;
+$disabledText: #b3b3b1;
+$linkHover: $themeColor;
+$supportText: $themeSupportColor;
+
+$mainHeading: $themeColor;
+$lightBorder: $themeSecondaryLightColor;
+$darkBorder: $themeSecondaryColor;
+
+$btnBgActive: $themeDarkColor;
+$btnColorActive: $themeLightColor;
+$btnBorderActive: $themeDarkColor;
+
+$slideDisabledBg: #fcfdfe;
+
+$transitionSlow: all 0.8s ease;
+$transition: all 0.4s ease;
+$transitionFast: all 0.2s ease;
+$transitionLinear: all 0.4s linear;
+$transitionEaseIn: all 0.4s ease-in;
+
+$boxShadowMaterial: 0 4px 10px 0px rgba(0, 0, 0, 0.225);
+$boxShadowCard: 0px 4px 16px rgba(141, 150, 178, 0.16);
+$boxShadowCardTop: 0px -4px 16px rgba(141, 150, 178, 0.16);
+$boxShadowCardMaterial: 0px 4px 16px rgba(141, 150, 178, 0.16);
+$boxShadowSlide: 2px 2px 8px 3px rgba(141, 150, 178, 0.16);
+$boxShadowSlideDisabled: 2px 2px 8px 3px rgba(255, 255, 255, 0.16);

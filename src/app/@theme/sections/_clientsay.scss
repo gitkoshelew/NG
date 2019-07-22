@@ -1,0 +1,334 @@
+.clientsay {
+  padding: 0;
+  @media #{$lg} {
+    padding-bottom: 50px;
+  }
+  .section--pattern--bottom-right {
+    height: 695px;
+    bottom: 96px;
+    @media #{$lg} {
+      bottom: 0;
+    }
+  }
+  &__content-wrapper {
+    background: $mainBgDark;
+    padding: 45px 0 210px;
+    @media #{$md} {
+      padding: 90px 0 240px;
+    }
+    @media #{$lg} {
+      padding: 90px 0 305px;
+    }
+  }
+  &__intro {
+    padding-bottom: 37px;
+  }
+  &__slider {
+    margin: -210px auto 175px;
+    @media #{$sm} {
+      max-width: 540px;
+    }
+    @media #{$md} {
+      margin-top: -175px auto 90px;
+      max-width: 750px;
+    }
+    @media #{$lg} {
+      margin: -290px auto 53px;
+      max-width: 960px;
+    }
+    @media #{$xxl} {
+      width: calc(100vw);
+      max-width: calc(50vw + 1800px);
+      padding-right: calc(50vw - 600px);
+      padding-left: calc(50vw - 600px);
+      margin-right: 0;
+      overflow-x: visible;
+    }
+
+    .slick-list {
+      margin-right: -5px;
+      margin-left: -5px;
+      @media #{$lg} {
+        overflow: visible;
+      }
+    }
+    .slick-track {
+      display: flex;
+      align-items: stretch;
+    }
+    .slick-slide {
+      padding: 0 16px;
+      font-size: 0;
+      height: auto;
+      opacity: 0;
+      transition: $transitionLinear;
+      @media #{$lg} {
+        padding: 0 20px;
+      }
+      & > div {
+        box-shadow: $boxShadowCard;
+        margin-bottom: 5px;
+        height: calc(100%-5px);
+      }
+
+      &.slick-visible,
+      &.slick-active,
+      &.slick-active + .slick-slide {
+        opacity: 1;
+      }
+
+      &.slick-active + .slick-slide,
+      &.slick-active + .slick-slide + .slick-slide,
+      &.slick-disabled,
+      &.slick-disabled + .slick-slide {
+        & > div {
+          box-shadow: $boxShadowSlideDisabled;
+        }
+        .clientsay__slide {
+          pointer-events: none;
+          background: $slideDisabledBg;
+
+          &-img,
+          &-heading,
+          &-intro,
+          &-links,
+          &-learnmore,
+          &-position {
+            opacity: 0.35;
+          }
+
+          &-heading,
+          &-intro,
+          &-learnmore,
+          &-position {
+            color: $themeSupportColor;
+          }
+        }
+      }
+    }
+  }
+  &__arrow {
+    bottom: -135px;
+    z-index: 2;
+    @media #{$md} {
+      bottom: 40px;
+    }
+    @media #{$lg} {
+      bottom: 50px;
+    }
+    &.slick {
+      &-prev {
+        right: calc(50% + 10px);
+        @media #{$md} {
+          left: auto;
+          right: 122px;
+        }
+
+        @media #{$xxl} {
+          right: calc(50vw - 468px);
+        }
+      }
+
+      &-next {
+        left: calc(50% + 10px);
+        @media #{$md} {
+          left: auto;
+          right: 50px;
+        }
+
+        @media #{$xxl} {
+          right: calc(50vw - 540px);
+        }
+        .round-btn-bg {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+
+  &__slide {
+    background-color: $themeLightColor;
+    position: relative;
+    padding-bottom: 130px;
+    height: 100%;
+    @media #{$md} {
+      padding-bottom: 120px;
+      padding-left: 320px;
+      min-height: 410px;
+    }
+
+    @media #{$lg} {
+      padding-left: 390px;
+      padding-bottom: 83px;
+      min-height: 430px;
+    }
+    &-img {
+      @include bgImg('@~images/bg/Director320.jpg', no-repeat, center top, cover);
+      max-height: 300px;
+      height: 57vw;
+
+      transition: $transition;
+      width: 100%;
+
+      @media #{$md} {
+        width: 290px;
+        min-width: 290px;
+        max-height: none;
+        height: 100%;
+        align-self: stretch;
+        position: absolute;
+        background-image: url('@~images/bg/Director768.jpg');
+        top: 0;
+        left: 0;
+      }
+      @media #{$lg} {
+        min-width: 350px;
+      }
+      @media #{$xxl} {
+        min-width: 370px;
+      }
+      &_solution {
+        max-height: none;
+        background-image: url('@~images/bg/solution1_320.png');
+        @media #{$md} {
+          background-image: url('@~images/bg/solution1_768.png');
+        }
+        @media #{$lg} {
+          background-image: url('@~images/bg/solution1_1200.png');
+        }
+        @media #{$xxl} {
+          background-image: url('@~images/bg/solution1_1920.png');
+        }
+      }
+    }
+    &-content {
+      padding: 40px 20px 20px;
+      transition: $transition;
+      @media #{$md} {
+        padding: 40px 25px 40px 0;
+      }
+      @media #{$lg} {
+        padding: 50px 48px 50px 30px;
+      }
+    }
+    &-links {
+      transition: $transition;
+      position: absolute;
+      width: calc(100% - 40px);
+      left: 20px;
+      bottom: 44px;
+      @media #{$md} {
+        left: 320px;
+        width: calc(100% - 340px);
+        bottom: 40px;
+      }
+
+      @media #{$lg} {
+        left: 414px;
+        width: calc(100% - 440px);
+        bottom: 44px;
+      }
+    }
+
+    &-position {
+      transition: $transition;
+      color: $supportText;
+      margin-bottom: 24px;
+      @media #{$md} {
+        margin-bottom: 30px;
+      }
+      @media #{$lg} {
+        margin-bottom: 25px;
+      }
+    }
+    &-heading {
+      transition: $transition;
+      @media #{$lg} {
+        margin-bottom: 0.4em;
+      }
+    }
+    &-intro {
+      transition: $transition;
+      margin-bottom: 1em;
+      @media #{$md} {
+        line-height: 1.8em;
+      }
+      @media #{$lg} {
+        line-height: 1.75em;
+      }
+    }
+
+    &-learnmore {
+      transition: $transition;
+      color: $linkHover;
+      margin-bottom: 20px;
+      padding: 0;
+      font-size: $fontLess;
+      text-decoration: underline;
+      margin-top: 20px;
+
+      @media #{$md} {
+        margin: 28px 0;
+        font-size: $font;
+      }
+      &:hover,
+      &:active {
+        text-decoration: none;
+      }
+    }
+
+    &-logo {
+      @include bgImg('@~images/img/GroupGray.svg', no-repeat, left center, contain);
+      height: 28px;
+      margin-top: 40px;
+      display: block;
+      @media #{$md} {
+        margin: 12px 0 12px;
+      }
+    }
+  }
+  &_fullimg {
+    padding-bottom: 50px;
+    .clientsay {
+      &__intro {
+        font-size: $font;
+        line-height: 1.5em;
+        padding-top: 0.25em;
+        padding-bottom: 1.75em;
+      }
+      &__slide {
+        padding: 0;
+        &-img {
+          position: relative;
+          width: 100%;
+          height: 480px;
+          background-position: center;
+        }
+      }
+      &__arrow {
+        @media #{$md} {
+          bottom: -80px;
+        }
+        &.slick {
+          @media #{$md} {
+            &-next {
+              right: 10px;
+            }
+            &-prev {
+              right: 82px;
+            }
+          }
+
+          @media #{$xxl} {
+            &-next {
+              right: calc(50vw - 590px);
+            }
+            &-prev {
+              right: calc(50vw - 518px);
+            }
+          }
+        }
+      }
+    }
+  }
+}

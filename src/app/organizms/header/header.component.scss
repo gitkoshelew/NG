@@ -1,0 +1,9 @@
+@import '../../@theme/utils/variables';
+@import '../../@theme/utils/mixins';
+@import '../../@theme/utils/dimensions';
+@import '../../@theme/base/fonts';
+
+.header{
+  background-color: $bg3;
+  padding: 20px 0;
+}

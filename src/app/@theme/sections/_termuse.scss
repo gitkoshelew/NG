@@ -1,0 +1,58 @@
+.termuse {
+  padding: 15px 0;
+  @media #{$md} {
+    padding: 84px 0;
+  }
+  @media #{$lg} {
+    padding: 40px 0 100px;
+  }
+  &__wrapper {
+    padding: 30px 0;
+    @media #{$md} {
+      padding: 18px 0;
+    }
+    @media #{$lg} {
+      padding: 35px 0;
+    }
+  }
+  &__title {
+    font-size: $title;
+    margin-bottom: 0.4em;
+    @media #{$lg} {
+      margin-bottom: 0.6em;
+      font-size: $titleBig;
+    }
+  }
+  &__subtitle {
+    font-size: $subtitle;
+    margin: 1.5em 0 0.8em;
+    @media #{$md} {
+      margin: 1.9em 0 0.7em;
+    }
+
+    @media #{$lg} {
+      font-size: $subtitleBig;
+      margin: 0.8em 0 0.4em;
+    }
+  }
+  &__text {
+    line-height: 1.75em;
+    font-size: $font;
+  }
+  &__img {
+    height: 515px;
+    margin-top: 30px;
+    @include bgImg('@~images/bg/result_320.png', no-repeat, center, cover);
+    box-shadow: $boxShadowSlide;
+    @media #{$md} {
+      background-image: url('@~images/bg/result_768.png');
+    }
+
+    @media #{$lg} {
+      background-image: url('@~images/bg/result_1200.png');
+    }
+    @media #{$xxl} {
+      background-image: url('@~images/bg/result_1920.png');
+    }
+  }
+}

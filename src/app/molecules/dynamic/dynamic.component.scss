@@ -1,0 +1,13 @@
+@import '../../@theme/utils/variables';
+@import '../../@theme/utils/mixins';
+@import '../../@theme/utils/dimensions';
+@import '../../@theme/base/fonts';
+
+.dynamic{
+  padding: 20px 0;
+  background: $bg4;
+  &__heading{
+    text-transform: uppercase;
+    color: $primary;
+  }
+}

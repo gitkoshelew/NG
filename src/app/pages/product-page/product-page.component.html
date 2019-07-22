@@ -1,0 +1,33 @@
+<section class="news-id">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <ul class="news-id__list">
+            <li *ngFor = "let itemNumber of [1,2,3,4,5]" class="news-id__list-item">
+              <!-- <a href="" class="new-id__anchor" [routerLink]="pagePath + itemNumber"> -->
+              <a href="" class="new-id__anchor" [routerLink]="[pagePath, itemNumber]">
+              {{'product' + itemNumber}}
+              </a>
+            </li>
+            <li class="news-id__list-item">
+                <a href="" class="new-id__anchor" routerLink="/pages/price"
+                [queryParams]="queryParams"
+                > 
+                price-page
+                </a>
+              </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="new-by-id">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          this is product № {{id}} page
+        </div>
+      </div>
+    </div>
+  </section>
+
